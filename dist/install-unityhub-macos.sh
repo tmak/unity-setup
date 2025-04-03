@@ -20,7 +20,7 @@ if [ -z "$appPath" ]; then
     echo "Failed to find Unity Hub app in $volume"
     exit 1
 fi
-cp -vrf "$appPath" /Applications
+sudo cp -vrf "$appPath" /Applications
 hdiutil unmount "$volume" -quiet
 sudo chmod -R 777 /Applications/Unity\ Hub.app/Contents/MacOS/Unity\ Hub
 sudo mkdir -p /Library/Application\ Support/Unity
